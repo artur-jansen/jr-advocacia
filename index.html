@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Ribeiro Advocacia</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<body>
+    <header>
+        <header class="header">
+            <a href="https://joaoribeiroadv.com" class="header-img__a"><img src="./assets/logo-branca.png"
+                    alt="Logo Jõao Ribeiro Advocacia e Consultoria Jurídica"></a>
+            <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-controls="main-nav"
+                aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="side-nav" id="main-nav" aria-hidden="true">
+                <ul>
+                    <li><a href="#">Página 1</a></li>
+                    <li><a href="#">Página 2</a></li>
+                    <li><a href="#">Página 3</a></li>
+                    <li><a href="#">Página 4</a></li>
+                    <li><a href="#">Página 5</a></li>
+                    <li><a href="#">Página 6</a></li>
+                    <li><a href="#">Página 7</a></li>
+                    <li><a href="#">Página 8</a></li>
+                </ul>
+                <button class="close-nav" aria-label="Fechar menu">Fechar menu</button>
+            </nav>
+            <div class="overlay"></div>
+        </header>
+    </header>
+    <button class="whatsApp" id="whats-flutuante" aria-label="Direcionar para o WhatsApp"
+        onclick="window.location.href='https://wa.me/5587999811766?text=Ol%C3%A1!%20Estou%20interessado%20em%20importar%20com%20voc%C3%AAs'">
+        <i class="fab fa-whatsapp" id="icon-whats"></i>
+    </button>
+    <button class="voltarTopo" aria-label="Voltar para o topo da página"
+        onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+        <i class="fa-solid fa-arrow-up" id="icon-seta"></i>
+    </button>
+    <main>
+        <section id="home">
+            <img class="logo" src="./assets/logo-branca.png" alt="Escritório de advocacia digital">
+            <div class="content">
+                <video class="content-gif" autoplay muted loop>
+                    <source src="./assets/gif-home.mp4" type="video/mp4">
+                </video>
+                <!-- <img class="content-gif" src="./assets/gif.gif" alt="a"> -->
+                <div class="content-div">
+                    <h1>Direito para o presente e <span class="content-span">o futuro digital</span></h1>
+                    <p>Atuamos com tecnologia, estratégia e proteção jurídica</p>
+                    <a class="button" href="wa.me/">Agende uma Consultoria</a>
+                </div>
+            </div>
+        </section>
+        </section>
+        <section id="áreas">
+            <h2 class="áreas-titulo">ÁREAS DE ATUAÇÃO</h2>
+            <div class="áreas-carrossel-wrapper">
+                <button class="áreas-btn-prev">‹</button>
+
+                <div class="áreas-carrossel-container">
+                    <div class="áreas-carrossel">
+                        <div class="áreas-carrossel-item">
+                            <h3>Área 1</h3>
+                            <img src="./assets/area.png" alt="Descrição da Área 1" class="áreas-carrossel-img" />
+                            <a class="áreas-btn">Saiba Mais</a>
+                        </div>
+                        <div class="áreas-carrossel-item">
+                            <h3>Área 2</h3>
+                            <img src="./assets/area.png" alt="Descrição da Área 2" class="áreas-carrossel-img" />
+                            <a class="áreas-btn">Saiba Mais</a>
+                        </div>
+                        <div class="áreas-carrossel-item">
+                            <h3>Área 3</h3>
+                            <img src="./assets/area.png" alt="Descrição da Área 2" class="áreas-carrossel-img" />
+                            <a class="áreas-btn">Saiba Mais</a>
+                        </div>
+                        <div class="áreas-carrossel-item">
+                            <h3>Área 4</h3>
+                            <img src="./assets/area.png" alt="Descrição da Área 1" class="áreas-carrossel-img" />
+                            <a class="áreas-btn">Saiba Mais</a>
+                        </div>
+                        <div class="áreas-carrossel-item">
+                            <h3>Área 5</h3>
+                            <img src="./assets/area.png" alt="Descrição da Área 2" class="áreas-carrossel-img" />
+                            <a class="áreas-btn">Saiba Mais</a>
+                        </div>
+                        <div class="áreas-carrossel-item">
+                            <h3>Área 6</h3>
+                            <img src="./assets/area.png" alt="Descrição da Área 2" class="áreas-carrossel-img" />
+                            <a class="áreas-btn">Saiba Mais</a>
+                        </div>
+                        <div class="áreas-carrossel-item">
+                            <h3>Área 7</h3>
+                            <img src="./assets/area.png" alt="Descrição da Área 2" class="áreas-carrossel-img" />
+                            <a class="áreas-btn">Saiba Mais</a>
+                        </div>
+                        <div class="áreas-carrossel-item">
+                            <h3>Área 8</h3>
+                            <img src="./assets/area.png" alt="Descrição da Área 2" class="áreas-carrossel-img" />
+                            <a class="áreas-btn">Saiba Mais</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="áreas-btn-next">›</button>
+            </div>
+            <div class="áreas-dots" id="dots-container"></div>
+        </section>
+        <section id="sobre">
+            <div class="sobre-container">
+                <h2 class="sobre-titulo">NOSSO TIME</h2>
+                <div class="sobre-carrossel-wrapper">
+                    <button class="sobre-btn-prev">‹</button>
+
+                    <div class="sobre-carrossel-container">
+                        <div class="sobre-carrossel">
+                            <div class="sobre-carrossel-item">
+                                <img src="./assets/maria.png" alt="Descrição Equipe" class="sobre-carrossel-img" />
+                                <h3>Maria F</h3>
+                                <p>Advogada - OAB/SP 123456</p>
+                            </div>
+
+                            <div class="sobre-carrossel-item">
+                                <img src="./assets/maria.png" alt="Descrição Equipe" class="sobre-carrossel-img" />
+                                <h3>João S</h3>
+                                <p>Advogado - OAB/RJ 654321</p>
+                            </div>
+
+                            <div class="sobre-carrossel-item">
+                                <img src="./assets/maria.png" alt="Descrição Equipe" class="sobre-carrossel-img" />
+                                <h3>Ana L</h3>
+                                <p>Advogada - OAB/MG 987654</p>
+                            </div>
+
+                            <div class="sobre-carrossel-item">
+                                <img src="./assets/maria.png" alt="Descrição Equipe" class="sobre-carrossel-img" />
+                                <h3>Pedro A</h3>
+                                <p>Advogado - OAB/BA 321789</p>
+                            </div>
+
+                            <div class="sobre-carrossel-item">
+                                <img src="./assets/maria.png" alt="Descrição Equipe" class="sobre-carrossel-img" />
+                                <h3>João P</h3>
+                                <p>Advogado - OAB/BA 321789</p>
+                            </div>
+
+                            <div class="sobre-carrossel-item">
+                                <img src="./assets/maria.png" alt="Descrição Equipe" class="sobre-carrossel-img" />
+                                <h3>Maria P</h3>
+                                <p>Advogada - OAB/SC 321789</p>
+                            </div>
+
+                            <div class="sobre-carrossel-item">
+                                <img src="./assets/maria.png" alt="Descrição Equipe" class="sobre-carrossel-img" />
+                                <h3>Sidney A</h3>
+                                <p>Advogado - OAB/ES 321789</p>
+                            </div>
+
+                            <div class="sobre-carrossel-item">
+                                <img src="./assets/maria.png" alt="Descrição Equipe" class="sobre-carrossel-img" />
+                                <h3>Artur A</h3>
+                                <p>Advogado - OAB/BA 321789</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="sobre-btn-next">›</button>
+                </div>
+
+                <div class="sobre-dots" id="sobre-dots-container"></div>
+            </div>
+            <div class="sobre-container__baixo">
+                <div class="sobre-container__baixo-missao">
+                    <img class="sobre-container__baixo-missao-img" src="./assets/missao.png"
+                        alt="Consultoria Jurídica Digital">
+                    <div class="sobre-container__baixo-missao-div">
+                        <div class="sobre-container__baixo-missao-div-texto">
+                            <h3 class="sobre-container__baixo-missao-div-texto-h3">Missão</h3>
+                            <div class="sobre-container__baixo-missao-div-texto-barrinha"></div>
+                        </div>
+                        <p class="sobre-container__baixo-missao-div-p">Oferecer soluções jurídicas inovadoras e seguras
+                            no campo do Direito Digital, protegendo os interesses de pessoas e empresas em ambientes
+                            virtuais. Atuamos com excelência técnica e compromisso ético na defesa de direitos
+                            relacionados a criptoativos, proteção de dados, plataformas digitais, games e tecnologia,
+                            promovendo segurança jurídica e liberdade no uso da internet.</p>
+                    </div>
+                </div>
+                <div class="sobre-container__baixo-visao">
+                    <img class="sobre-container__baixo-visao-img" src="./assets/visao.png"
+                        alt="Consultoria Jurídica Digital">
+                    <div class="sobre-container__baixo-visao-div">
+                        <div class="sobre-container__baixo-visao-div-texto">
+                            <h3 class="sobre-container__baixo-visao-div-texto-h3">Visão</h3>
+                            <div class="sobre-container__baixo-visao-div-texto-barrinha"></div>
+                        </div>
+                        <p class="sobre-container__baixo-visao-div-p">Ser referência nacional em advocacia digital,
+                            reconhecida pela vanguarda tecnológica, atuação estratégica e resultados eficazes para
+                            clientes do ecossistema digital, desde desenvolvedores, gamers e influenciadores até
+                            fintechs e corporações. Buscamos transformar desafios jurídicos da era digital em
+                            oportunidades de crescimento com responsabilidade e inovação.</p>
+                    </div>
+                </div>
+                <div class="sobre-container__baixo-valores">
+                    <img class="sobre-container__baixo-valores-img" src="./assets/valores.png"
+                        alt="Consultoria Jurídica Digital">
+                    <div class="sobre-container__baixo-valores-div">
+                        <div class="sobre-container__baixo-valores-div-texto">
+                            <h3 class="sobre-container__baixo-valores-div-texto-h3">Valores</h3>
+                            <div class="sobre-container__baixo-valores-div-texto-barrinha"></div>
+                        </div>
+                        <p class="sobre-container__baixo-valores-div-p">Ética, inovação, transparência e comprometimento
+                            com o cliente. Valorizamos a privacidade, a liberdade de expressão e a proteção de direitos
+                            digitais, promovendo um ambiente jurídico alinhado às novas tecnologias, à governança
+                            corporativa e às diretrizes ESG. Atuamos com respeito à diversidade, responsabilidade social
+                            e foco em soluções sustentáveis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="depoimentos">
+
+        </section>
+        <section id="artigos">
+
+        </section>
+        <section id="contato">
+
+        </section>
+    </main>
+    <footer>
+        <div class="footer-1">
+            <img src="./assets/logo-preta.png" alt="Advocacia digital">
+            <div class="footer-1__links">
+                <div class="footer-1__links__menu">
+                    <h4 class="footer-1__links-h4">Menu:</h4>
+                    <ul class="menu-links">
+                        <li><a class="footer-1-links__a" href="#home">Home</a></li>
+                        <li><a class="footer-1-links__a" href="#áreas">Atuação</a></li>
+                        <li><a class="footer-1-links__a" href="#sobre">Sobre</a></li>
+                        <li><a class="footer-1-links__a" href="#depoimentos">Depoimentos</a></li>
+                        <li><a class="footer-1-links__a" href="#artigos">Artigos</a></li>
+                        <li><a class="footer-1-links__a" href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-1__links__paginas">
+                    <h4 class="footer-1__links-h4">Páginas:</h4>
+                    <ul class="paginas-links">
+                        <li><a class="footer-1-links__a" href="https://joaoribeiroadv.com">Inicial</a></li>
+                        <li><a class="footer-1-links__a" href="https://joaoribeiroadv.com/page1.html">Direito Digital e
+                                Antifraude</a></li>
+                        <li><a class="footer-1-links__a" href="https://joaoribeiroadv.com/page2.html">Direito dos Gamers
+                                e eSports</a></li>
+                        <li><a class="footer-1-links__a" href="https://joaoribeiroadv.com/page3.html">Direito
+                                Contratual</a></li>
+                        <li><a class="footer-1-links__a" href="https://joaoribeiroadv.com/page4.html">Proteção de
+                                Dados</a></li>
+                        <li><a class="footer-1-links__a" href="https://joaoribeiroadv.com/page5.html">Serviços de Data
+                                Protection Office</a></li>
+                        <li><a class="footer-1-links__a" href="https://joaoribeiroadv.com/page6.html">Governança
+                                Corporativa</a></li>
+                        <li><a class="footer-1-links__a" href="https://joaoribeiroadv.com/page7.html">Direito
+                                Bancário</a></li>
+                        <li><a class="footer-1-links__a" href="https://joaoribeiroadv.com/page8.html">Criptoativos</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-1__links__contato">
+                    <h4 class="footer-1__links-h4">Contato:</h4>
+                    <ul class="contato-links">
+                        <li><a class="footer-1-links__a" href="wa.me/">(11) 99123-4321</a></li>
+                        <li><a class="footer-1-links__a" href="mailto:">escritorio@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-1__links__termos">
+                    <a class="footer-1__links-h4-a" href="./pages/termos-privacidade.html">Política de Privacidade <br>
+                        & Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-2">
+            <p>© <span id="year"></span> João Ribeiro Advocacia e Consultoria Jurídica. Todos os direitos reservados.
+            </p>
+        </div>
+        <div class="footer-3">
+            <a href="https://www.doisdev.com"><img src="./assets/logo-doisdev.png"
+                    alt="Consultoria jurídica digital"></a>
+        </div>
+    </footer>
+</body>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="./js/script.js"></script>
+
+</html>
