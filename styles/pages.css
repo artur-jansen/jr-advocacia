@@ -14,10 +14,6 @@
     ;
 }
 
-h1 {
-    font-size: 3em;
-}
-
 h1,
 h2,
 h3,
@@ -27,20 +23,42 @@ h6 {
     font-family: "Inter", sans-serif;
     font-weight: bolder;
     font-style: italic;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+h4 {
+    font-size: 1.5em;
 }
 
 p,
-a {
+li,
+label {
     font-size: 1.2em;
     font-family: "Inter", sans-serif;
     font-style: italic;
+    list-style: none;
+    text-decoration: none;
 }
 
-button {
+a {
     font-size: 1.3em;
     font-family: "Inter", sans-serif;
     font-style: italic;
     font-weight: bold;
+    list-style: none;
+    text-decoration: none;
 }
 
 .whatsApp {
@@ -63,7 +81,7 @@ button {
     transition: 500ms;
     transform: rotate(360deg);
     border: 2px solid #25D366;
-    border-radius: 12px;
+    border-radius: 12px 0 12px 0;
     color: #25D366;
     background-color: #ffffff;
 }
@@ -87,7 +105,7 @@ button {
 .voltarTopo:hover {
     transition: 500ms;
     transform: rotate(360deg);
-    border-radius: 12px;
+    border-radius: 12px 0 12px 0;
     background-color: var(--branco);
     border: 2px solid var(--azul);
 }
@@ -155,7 +173,7 @@ section {
     display: block;
     width: 32px;
     height: 4px;
-    border-radius: 2px;
+    border-radius: 2px 0 2px 0;
     background: var(--branco);
     transition: all .3s cubic-bezier(.45, 0, 0, 1.48);
 }
@@ -218,7 +236,7 @@ section {
     background: var(--branco);
     color: var(--preto);
     border: 3px solid var(--branco);
-    border-radius: 6px;
+    border-radius: 12px 0 12px 0;
     cursor: pointer;
     padding: 0.3em 2em;
     width: 100%;
@@ -251,7 +269,204 @@ section {
 /* HOME */
 /* HOME */
 /* HOME */
+#pages-home {
+    min-height: 10vh;
+    background-image: url(../assets/pages-home.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 4em;
+}
 
+.pages-home__titulo {
+    text-align: center;
+    color: var(--branco);
+}
+
+/* CONTATO */
+/* CONTATO */
+/* CONTATO */
+#pages-contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pages-contato__cima {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 4em 4em 0 4em;
+}
+
+.pages-contato__cima-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    color: var(--azul);
+    border: 3px solid var(--azul);
+    border-radius: 12px 0 12px 0;
+    padding: 1em;
+    width: 30%;
+}
+
+.pages-contato__cima-div i {
+    font-size: 2.5em;
+}
+
+.pages-contato__cima-div-h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+.pages-contato__meio {
+    padding: 4em;
+}
+
+.pages-contato__meio p {
+    color: var(--azul);
+    width: 80%;
+}
+
+.pages-contato__baixo {
+    background-color: var(--azul);
+    padding: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4em;
+    width: 100%;
+}
+
+.pages-contato__baixo-img {
+    width: 30%;
+    height: 100%;
+    border-radius: 12px 0 12px 0;
+}
+
+.pages-contato__baixo-div {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    gap: 2em;
+}
+
+.pages-contato__baixo-div-h2 {
+    color: var(--branco);
+    font-weight: 400;
+    width: 70%;
+}
+
+.pages-contato__baixo-div-a {
+    background: transparent;
+    color: var(--branco);
+    border: 3px solid var(--branco);
+    border-radius: 12px 0 12px 0;
+    cursor: pointer;
+    padding: 0.3em 2em;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+
+.pages-contato__baixo-div-a:hover,
+.pages-contato__baixo-div-a:focus {
+    transition: 1s;
+    transform: scale(1.01);
+    background: #ffffff83;
+}
+
+/* FOOTER */
+/* FOOTER */
+/* FOOTER */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-1 {
+    display: flex;
+    align-items: flex-start;
+    gap: 4em;
+    padding: 2em;
+    width: 100%;
+    color: #ad6d23;
+}
+
+.footer-1 img {
+    width: 15%;
+    height: 100%;
+}
+
+.footer-1__links {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3em;
+}
+
+.footer-1__links-h4 {
+    font-size: 1.5em;
+}
+
+.footer-1__links-h4-a {
+    font-size: 1.5em;
+    color: var(--azul);
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.footer-1-links__a {
+    color: var(--preto);
+}
+
+.footer-1-links__a:hover,
+.footer-1-links__a:focus,
+.footer-1__links-h4-a:hover,
+.footer-1__links-h4-a:focus {
+    transition: 1s;
+    transform: scale(1.01);
+    color: #0CFFEB;
+}
+
+.footer-2 {
+    background-color: var(--azul);
+    padding: 0.5em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer-2 p {
+    color: var(--branco);
+    text-align: center;
+}
+
+.footer-3 {
+    background-color: #031F37;
+    padding: 0.5em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer-3 img:hover {
+    transition: 1s;
+    transform: scale(1.03);
+}
 
 @media (max-width: 900px) {
 
@@ -268,6 +483,49 @@ section {
     /* HOME */
 
 
+    /* CONTATO */
+    /* CONTATO */
+    /* CONTATO */
+    .pages-contato__cima {
+        flex-direction: column;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    .pages-contato__cima-div {
+        width: 100%;
+    }
+
+    .pages-contato__baixo {
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    .pages-contato__baixo-img {
+        width: 80%;
+    }
+
+    .pages-contato__baixo-div-h2 {
+        width: 100%;
+    }
+
+
+    /* FOOTER */
+    /* FOOTER */
+    /* FOOTER */
+    .footer-1 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-1 img {
+        width: 35%;
+    }
+
+    .footer-1__links {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 480px) {
@@ -283,6 +541,42 @@ section {
     /* HOME */
     /* HOME */
     /* HOME */
+    #pages-home {
+        padding: 2em 1.5em;
+    }
 
 
+    /* CONTATO */
+    /* CONTATO */
+    /* CONTATO */
+    .pages-contato__cima {
+        padding: 4em 1.5em 0 1.5em;
+    }
+
+    .pages-contato__meio {
+        padding: 2em 1.5em;
+    }
+
+    .pages-contato__meio p {
+        width: 100%;
+    }
+
+    .pages-contato__baixo {
+        padding: 4em 1.5em;
+    }
+
+    .pages-contato__baixo-img {
+        width: 100%;
+    }
+
+    .pages-contato__baixo-div-a {
+        padding: 0.3em 1.5em;
+    }
+
+    /* FOOTER */
+    /* FOOTER */
+    /* FOOTER */
+    .footer-1 img {
+        width: 65%;
+    }
 }
