@@ -271,7 +271,7 @@ section {
 /* HOME */
 #pages-home {
     min-height: 10vh;
-    background-image: url(../assets/pages-home.png);
+    background-image: url(../assets/termos.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -287,104 +287,53 @@ section {
     color: var(--branco);
 }
 
-/* CONTATO */
-/* CONTATO */
-/* CONTATO */
-#pages-contato {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.pages-contato__cima {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 4em 4em 0 4em;
-}
-
-.pages-contato__cima-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-    color: var(--azul);
-    border: 3px solid var(--azul);
-    border-radius: 12px 0 12px 0;
-    padding: 1em;
-    width: 30%;
-    box-shadow: 4px 4px 6px 1px rgba(0, 0, 0, 0.3);
-}
-
-.pages-contato__cima-div i {
-    font-size: 2.5em;
-}
-
-.pages-contato__cima-div-h2 {
-    font-size: 2em;
-    text-align: center;
-}
-
-.pages-contato__meio {
-    padding: 4em;
-}
-
-.pages-contato__meio p {
-    color: var(--azul);
-    width: 80%;
-}
-
-.pages-contato__baixo {
+/* TERMOS */
+/* TERMOS */
+/* TERMOS */
+#termos {
     background-color: var(--azul);
+    color: var(--branco);
     padding: 4em;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 4em;
-    width: 100%;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 2em;
 }
 
-.pages-contato__baixo-img {
-    width: 30%;
-    height: 100%;
+.termos-div {
+    background-color: var(--branco);
+    color: var(--azul);
+    padding: 1em;
+    width: 100%;
+    text-align: center;
     border-radius: 12px 0 12px 0;
 }
 
-.pages-contato__baixo-div {
+.termos-div__itens {
     display: flex;
     flex-direction: column;
     align-items: baseline;
     justify-content: center;
-    gap: 2em;
-}
-
-.pages-contato__baixo-div-h2 {
-    color: var(--branco);
-    font-weight: 400;
-    width: 70%;
-}
-
-.pages-contato__baixo-div-a {
-    background: transparent;
-    color: var(--branco);
-    border: 3px solid var(--branco);
+    gap: 1em;
+    padding: 1em;
     border-radius: 12px 0 12px 0;
-    cursor: pointer;
-    padding: 0.3em 2em;
-    font-size: 1.5em;
-    font-weight: bolder;
+    background-color: #031F37;
+    width: 100%;
 }
 
+.termos-div__itens h2 {
+    font-size: 2em !important;
+}
 
-.pages-contato__baixo-div-a:hover,
-.pages-contato__baixo-div-a:focus {
+.termos-div__itens-email {
+    color: #0CFFEB;
+}
+
+.termos-div__itens-email:hover,
+.termos-div__itens-email:focus {
     transition: 1s;
     transform: scale(1.01);
-    background: #ffffff83;
+    color: #05A5B0;
 }
 
 /* FOOTER */
@@ -488,30 +437,15 @@ footer {
     /* HOME */
 
 
-    /* CONTATO */
-    /* CONTATO */
-    /* CONTATO */
-    .pages-contato__cima {
-        flex-direction: column;
-        justify-content: center;
-        gap: 2em;
+    /* TERMOS */
+    /* TERMOS */
+    /* TERMOS */
+    #termos{
+        padding: 4em 1.5em;
     }
 
-    .pages-contato__cima-div {
-        width: 100%;
-    }
-
-    .pages-contato__baixo {
-        flex-direction: column;
-        align-items: baseline;
-    }
-
-    .pages-contato__baixo-img {
-        width: 80%;
-    }
-
-    .pages-contato__baixo-div-h2 {
-        width: 100%;
+    .termos-div__itens-email{
+        font-size: 1em;
     }
 
     /* FOOTER */
@@ -549,33 +483,10 @@ footer {
         padding: 2em 1.5em;
     }
 
-
     /* CONTATO */
     /* CONTATO */
     /* CONTATO */
-    .pages-contato__cima {
-        padding: 4em 1.5em 0 1.5em;
-    }
 
-    .pages-contato__meio {
-        padding: 2em 1.5em;
-    }
-
-    .pages-contato__meio p {
-        width: 100%;
-    }
-
-    .pages-contato__baixo {
-        padding: 4em 1.5em;
-    }
-
-    .pages-contato__baixo-img {
-        width: 100%;
-    }
-
-    .pages-contato__baixo-div-a {
-        padding: 0.3em 1.5em;
-    }
 
     /* FOOTER */
     /* FOOTER */

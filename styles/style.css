@@ -14,6 +14,53 @@
     ;
 }
 
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: var(--azul);
+    color: white;
+    padding: 16px;
+    display: none;
+    z-index: 1000;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: "Inter", sans-serif;
+    font-style: italic;
+}
+
+#cookie-banner button {
+    background: var(--branco);
+    color: var(--azul);
+    border-radius: 12px 0 12px 0;
+    padding: 0.1em 1em;
+    font-size: 1.3em;
+    font-family: "Inter", sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    list-style: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#cookie-banner button:hover {
+    transition: 1s;
+    transform: scale(1.01);
+    background: #ffffff83;
+}
+
+#cookie-banner button:focus {
+    transition: 1s;
+    transform: scale(1.01);
+    background: #ffffff83;
+}
+
+#cookie-banner a {
+    color: #0CFFEB;
+    text-decoration: underline;
+    font-size: 1.2em;
+}
+
 h1,
 h2,
 h3,
@@ -407,7 +454,7 @@ section {
     justify-content: space-between;
 }
 
-.áreas-carrossel-item h3{
+.áreas-carrossel-item h3 {
     text-align: center;
 }
 

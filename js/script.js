@@ -218,3 +218,12 @@ function trocaFrase(fase) {
 
   btnContainer.appendChild(btn);
 }
+
+if (!localStorage.getItem('cookiesAceitos')) {
+  document.getElementById('cookie-banner').style.display = 'block';
+}
+
+document.getElementById('aceitar-cookies').addEventListener('click', () => {
+  localStorage.setItem('cookiesAceitos', 'true');
+  document.getElementById('cookie-banner').style.display = 'none';
+});
