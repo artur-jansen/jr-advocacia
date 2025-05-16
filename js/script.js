@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const dotsContainer = document.getElementById('dots-container');
   const items = document.querySelectorAll('.áreas-carrossel-item');
 
-  let itemsPorSlide = 2; // padrão
+  let itemsPorSlide = 4; // padrão
   let totalSlides = Math.ceil(items.length / itemsPorSlide);
   let currentSlide = 0;
 
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (larguraTela <= 600) {
       itemsPorSlide = 1;
     } else if (larguraTela <= 1024) {
-      itemsPorSlide = 2;
+      itemsPorSlide = 3;
     } else {
       itemsPorSlide = 2;
     }
@@ -103,6 +103,50 @@ document.addEventListener('DOMContentLoaded', function () {
     updateCarrossel();
   });
 
+  function habilitarArrastar(carrossel) {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    carrossel.addEventListener('mousedown', (e) => {
+      isDown = true;
+      carrossel.classList.add('arrastando');
+      startX = e.pageX - carrossel.offsetLeft;
+      scrollLeft = carrossel.scrollLeft;
+    });
+
+    carrossel.addEventListener('mouseleave', () => {
+      isDown = false;
+      carrossel.classList.remove('arrastando');
+    });
+
+    carrossel.addEventListener('mouseup', () => {
+      isDown = false;
+      carrossel.classList.remove('arrastando');
+    });
+
+    carrossel.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - carrossel.offsetLeft;
+      const walk = (x - startX) * 1.5; // velocidade do scroll
+      carrossel.scrollLeft = scrollLeft - walk;
+    });
+
+    // Suporte para touch
+    carrossel.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].pageX - carrossel.offsetLeft;
+      scrollLeft = carrossel.scrollLeft;
+    });
+
+    carrossel.addEventListener('touchmove', (e) => {
+      const x = e.touches[0].pageX - carrossel.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      carrossel.scrollLeft = scrollLeft - walk;
+    });
+  }
+  
+  habilitarArrastar(carrossel);
   ajustarItensPorSlide();
   window.addEventListener('resize', ajustarItensPorSlide);
 });
