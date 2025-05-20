@@ -1564,7 +1564,10 @@ footer {
 
     .depoimentos-div__meio-case {
         width: 100%;
-        padding: 1em;
+    }
+
+    .depoimentos-div__meio-case-h3 {
+        font-size: 2em !important;
     }
 
     .depoimentos-div__meio-case-container-a {

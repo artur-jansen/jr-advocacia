@@ -205,13 +205,13 @@ const cases = {
   case1: {
     titulo: "Estruturação Contratual para Campanha com Influenciador digital",
     texto: "Uma marca nacional do setor de cosméticos buscava realizar uma campanha publicitária com um influenciador digital com quase de 500 mil seguidores, envolvendo conteúdos em múltiplas plataformas, cláusulas de exclusividade e métricas de desempenho.",
-    link: "case1.html",
+    link: "./pages/case1.html",
     video: "./assets/case.mp4"
   },
   case2: {
     titulo: "Recuperação de Conta Hackeada",
     texto: "A conta comercial da loja no Instagram foi hackeada, resultando na perda de acesso ao perfil, alteração de senha e publicação de conteúdos fraudulentos que prejudicavam a privacidade da loja. O hacker permitiu pagamento em criptomoedas para devolução ou acesso, e a plataforma não respondeu rapidamente às solicitações de recuperação.",
-    link: "case1.html",
+    link: "./pages/case2.html",
     video: "./assets/case2.mp4"
   },
 };
