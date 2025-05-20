@@ -11,31 +11,25 @@
 </head>
 
 <body>
-    <header>
-        <header class="header">
-            <a href="https://joaoribeiroadv.com" class="header-img__a"><img src="./assets/logo-branca.png"
-                    alt="Logo Jõao Ribeiro Advocacia e Consultoria Jurídica"></a>
-            <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-controls="main-nav"
-                aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <nav class="side-nav" id="main-nav" aria-hidden="true">
-                <ul>
-                    <li><a href="https://joaoribeiroadv.com/page1.html">Página 1</a></li>
-                    <li><a href="https://joaoribeiroadv.com/page2.html">Página 2</a></li>
-                    <li><a href="https://joaoribeiroadv.com/page3.html">Página 3</a></li>
-                    <li><a href="https://joaoribeiroadv.com/page4.html">Página 4</a></li>
-                    <li><a href="https://joaoribeiroadv.com/page5.html">Página 5</a></li>
-                    <li><a href="https://joaoribeiroadv.com/page6.html">Página 6</a></li>
-                    <li><a href="https://joaoribeiroadv.com/page7.html">Página 7</a></li>
-                    <li><a href="https://joaoribeiroadv.com/page8.html">Página 8</a></li>
-                </ul>
-                <button class="close-nav" aria-label="Fechar menu">Fechar menu</button>
-            </nav>
-            <div class="overlay"></div>
-        </header>
+    <header class="header">
+        <a href="https://joaoribeiroadv.com" class="header-img__a"><img src="./assets/logo-branca.png"
+                alt="Logo Jõao Ribeiro Advocacia e Consultoria Jurídica"></a>
+        <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-controls="main-nav" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="side-nav" id="main-nav" aria-hidden="true">
+            <ul>
+                <li><a href="https://joaoribeiroadv.com/">Página Inicial</a></li>
+                <li><a href="./pages/joao-ribeiro.html">Sobre João Ribeiro</a></li>
+                <li><a href="./pages/servicos.html">Nossos Serviços</a></li>
+                <li><a href="./pages/ultimos-artigos.html">Últimos Artigos</a></li>
+                <li><a href="./pages/contato.html">Contato</a></li>
+            </ul>
+            <button class="close-nav" aria-label="Fechar menu">Fechar menu</button>
+        </nav>
+        <div class="overlay"></div>
     </header>
     <button class="whatsApp" id="whats-flutuante" aria-label="Direcionar para o WhatsApp"
         onclick="window.location.href='https://wa.me/5511915913796'">
@@ -132,14 +126,6 @@
                             </div>
                             <div class="áreas-carrossel-item">
                                 <div class="áreas-carrossel-item-div">
-                                    <h3>Direito Bancário</h3>
-                                    <a class="áreas-btn" href="https://joaoribeiroadv.com/page8.html">Saiba Mais</a>
-                                </div>
-                                <img src="./assets/area.png" alt="Direito Bancário & Regulamentação Financeira"
-                                    class="áreas-carrossel-img" />
-                            </div>
-                            <div class="áreas-carrossel-item">
-                                <div class="áreas-carrossel-item-div">
                                     <h3>Regulamentação Financeira</h3>
                                     <a class="áreas-btn" href="https://joaoribeiroadv.com/page8.html">Saiba Mais</a>
                                 </div>
@@ -164,7 +150,7 @@
             <div class="sobre-container">
                 <h2 class="sobre-titulo">NOSSO TIME</h2>
                 <div class="sobre-container__cima">
-                    <img class="sobre-container__cima-img" src="./assets/joaoF.png" alt="Advogado João Ribeiro">
+                    <img class="sobre-container__cima-img" src="./assets/jr.png" alt="Advogado João Ribeiro">
                     <div class="sobre-container__cima-div">
                         <p class="sobre-container__cima-div-p">João Ribeiro é advogado com sólida formação acadêmica e
                             atuação estratégica nas áreas de Direito Digital,
@@ -188,7 +174,6 @@
                             Mais</a>
                     </div>
                 </div>
-
                 <div class="sobre-container__baixo">
                     <div class="sobre-container__baixo-missao">
                         <img class="sobre-container__baixo-missao-img" src="./assets/missao.png"
@@ -251,18 +236,25 @@
                 <img class="depoimentos-div__titulo-svg" src="./assets/dep-direito.svg" alt="Cases de Sucesso Advogado">
             </div>
             <div class="depoimentos-div__meio">
-                <div class="depoimentos-div__meio-case">
-                    <div class="depoimentos-div__meio-case-container">
-                        <a class="depoimentos-div__meio-case-container-btn" onclick="trocaFrase('case1')">Case 1</a>
-                        <a class="depoimentos-div__meio-case-container-btn" onclick="trocaFrase('case2')">Case 2</a>
+                <div class="depoimentos-video-wrapper">
+                    <video autoplay muted loop playsinline class="depoimentos-video-bg video-case">
+                        <source src="./assets/case.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeo em background.
+                    </video>
+                    <div class="depoimentos-overlay"></div>
+
+                    <div class="depoimentos-div__meio-case">
+                        <div class="depoimentos-div__meio-case-container">
+                            <a class="depoimentos-div__meio-case-container-btn" onclick="trocaFrase('case1')">Case 1</a>
+                            <a class="depoimentos-div__meio-case-container-btn" onclick="trocaFrase('case2')">Case 2</a>
+                        </div>
+                        <h3 class="depoimentos-div__meio-case-h3">Cases de Sucesso Escritório João Ribeiro</h3>
+                        <p class="depoimentos-div__meio-case-p">
+                            Cases de sucesso são relatos reais que demonstram como estratégias jurídicas bem aplicadas
+                            podem transformar desafios em conquistas...
+                        </p>
+                        <a class="depoimentos-div__meio-case-a" href=""></a>
                     </div>
-                    <h3 class="depoimentos-div__meio-case-h3">Case de Sucesso Escritório João Ribeiro</h3>
-                    <p class="depoimentos-div__meio-case-p">Cases de sucesso são relatos reais que demonstram como
-                        estratégias jurídicas bem aplicadas podem transformar desafios em conquistas. Eles reforçam a
-                        credibilidade do escritório e mostram na prática como nossa atuação faz a diferença. Para
-                        conhecer exemplos completos de cases de sucessos do nosso escritório, basta clicar nos botões
-                        acima.</p>
-                    <a class="depoimentos-div__meio-case-a" href=""></a>
                 </div>
             </div>
             <div class="depoimentos-container__meio">
@@ -324,46 +316,8 @@
         </section>
         <section id="artigos">
             <h2 class="artigos-titulo">ÚLTIMOS ARTIGOS</h2>
-            <div class="artigos-container">
-                <div class="artigos-container__item">
-                    <img class="artigos-container__item-seta" src="./assets/seta.svg" alt="Artigo Advocacia">
-                    <img class="artigos-container__item-img" src="./assets/artigo.png" alt="Artigo">
-                    <div class="artigos-container__item-baixo">
-                        <div class="artigos-container__item-baixo-data">
-                            <div class="artigos-container__item-baixo-data-div"><span>Artigo</span></div>
-                            <p class="artigos-container__item-baixo-data-p">02/05/2025</p>
-                        </div>
-                        <p class="artigos-container__item-baixo-p">Paulo Vidigal estará no Global Privacy Summit 2025
-                        </p>
-                        <a href="" class="artigos-container__item-baixo-btn">Saiba Mais</a>
-                    </div>
-                </div>
-                <div class="artigos-container__item">
-                    <img class="artigos-container__item-seta" src="./assets/seta.svg" alt="Artigo Advocacia">
-                    <img class="artigos-container__item-img" src="./assets/artigo.png" alt="Artigo">
-                    <div class="artigos-container__item-baixo">
-                        <div class="artigos-container__item-baixo-data">
-                            <div class="artigos-container__item-baixo-data-div"><span>Artigo</span></div>
-                            <p class="artigos-container__item-baixo-data-p">02/05/2025</p>
-                        </div>
-                        <p class="artigos-container__item-baixo-p">Paulo Vidigal estará no Global Privacy Summit 2025
-                        </p>
-                        <a href="" class="artigos-container__item-baixo-btn">Saiba Mais</a>
-                    </div>
-                </div>
-                <div class="artigos-container__item">
-                    <img class="artigos-container__item-seta" src="./assets/seta.svg" alt="Artigo Advocacia">
-                    <img class="artigos-container__item-img" src="./assets/artigo.png" alt="Artigo">
-                    <div class="artigos-container__item-baixo">
-                        <div class="artigos-container__item-baixo-data">
-                            <div class="artigos-container__item-baixo-data-div"><span>Artigo</span></div>
-                            <p class="artigos-container__item-baixo-data-p">02/05/2025</p>
-                        </div>
-                        <p class="artigos-container__item-baixo-p">Paulo Vidigal estará no Global Privacy Summit 2025
-                        </p>
-                        <a href="" class="artigos-container__item-baixo-btn">Saiba Mais</a>
-                    </div>
-                </div>
+            <div class="artigos-container" id="artigos-container">
+                <!-- Artigos via JS -->
             </div>
         </section>
         <section id="contato">
@@ -500,5 +454,6 @@
 </body>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="./js/script.js"></script>
+<script src="./js/artigos.js"></script>
 
 </html>

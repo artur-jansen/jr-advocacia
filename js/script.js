@@ -3,27 +3,37 @@ const sideNav = document.querySelector('.side-nav');
 const overlay = document.querySelector('.overlay');
 const closeBtn = document.querySelector('.close-nav');
 
-toggle.addEventListener('click', () => {
-  toggle.classList.add('active');
-  sideNav.classList.add('open');
-  overlay.classList.add('active');
-  toggle.setAttribute('aria-expanded', 'true');
-  sideNav.setAttribute('aria-hidden', 'false');
-});
-
-function closeMenu() {
-  toggle.classList.remove('active');
-  sideNav.classList.remove('open');
-  overlay.classList.remove('active');
-  toggle.setAttribute('aria-expanded', 'false');
-  sideNav.setAttribute('aria-hidden', 'true');
+if (toggle) {
+  toggle.addEventListener('click', () => {
+    toggle.classList.add('active');
+    sideNav.classList.add('open');
+    overlay.classList.add('active');
+    toggle.setAttribute('aria-expanded', 'true');
+    sideNav.setAttribute('aria-hidden', 'false');
+  });
 }
 
-closeBtn.addEventListener('click', closeMenu);
-overlay.addEventListener('click', closeMenu);
+function closeMenu() {
+  if (toggle) {
+    toggle.classList.remove('active');
+  }
+  if (sideNav) {
+    sideNav.classList.remove('open');
+    sideNav.setAttribute('aria-hidden', 'true');
+  }
+  if (overlay) {
+    overlay.classList.remove('active');
+  }
+  if (toggle) {
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+}
+
+if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+if (overlay) overlay.addEventListener('click', closeMenu);
 
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && sideNav.classList.contains('open')) {
+  if (e.key === 'Escape' && sideNav?.classList.contains('open')) {
     closeMenu();
   }
 });
@@ -103,50 +113,6 @@ document.addEventListener('DOMContentLoaded', function () {
     updateCarrossel();
   });
 
-  function habilitarArrastar(carrossel) {
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    carrossel.addEventListener('mousedown', (e) => {
-      isDown = true;
-      carrossel.classList.add('arrastando');
-      startX = e.pageX - carrossel.offsetLeft;
-      scrollLeft = carrossel.scrollLeft;
-    });
-
-    carrossel.addEventListener('mouseleave', () => {
-      isDown = false;
-      carrossel.classList.remove('arrastando');
-    });
-
-    carrossel.addEventListener('mouseup', () => {
-      isDown = false;
-      carrossel.classList.remove('arrastando');
-    });
-
-    carrossel.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - carrossel.offsetLeft;
-      const walk = (x - startX) * 1.5; // velocidade do scroll
-      carrossel.scrollLeft = scrollLeft - walk;
-    });
-
-    // Suporte para touch
-    carrossel.addEventListener('touchstart', (e) => {
-      startX = e.touches[0].pageX - carrossel.offsetLeft;
-      scrollLeft = carrossel.scrollLeft;
-    });
-
-    carrossel.addEventListener('touchmove', (e) => {
-      const x = e.touches[0].pageX - carrossel.offsetLeft;
-      const walk = (x - startX) * 1.5;
-      carrossel.scrollLeft = scrollLeft - walk;
-    });
-  }
-  
-  habilitarArrastar(carrossel);
   ajustarItensPorSlide();
   window.addEventListener('resize', ajustarItensPorSlide);
 });
@@ -239,18 +205,24 @@ const cases = {
   case1: {
     titulo: "Estruturação Contratual para Campanha com Influenciador digital",
     texto: "Uma marca nacional do setor de cosméticos buscava realizar uma campanha publicitária com um influenciador digital com quase de 500 mil seguidores, envolvendo conteúdos em múltiplas plataformas, cláusulas de exclusividade e métricas de desempenho.",
-    link: "case1.html"
+    link: "case1.html",
+    video: "./assets/case.mp4"
   },
   case2: {
     titulo: "Recuperação de Conta Hackeada",
     texto: "A conta comercial da loja no Instagram foi hackeada, resultando na perda de acesso ao perfil, alteração de senha e publicação de conteúdos fraudulentos que prejudicavam a privacidade da loja. O hacker permitiu pagamento em criptomoedas para devolução ou acesso, e a plataforma não respondeu rapidamente às solicitações de recuperação.",
-    link: "case1.html"
+    link: "case1.html",
+    video: "./assets/case2.mp4"
   },
 };
 
 function trocaFrase(fase) {
   document.querySelector(".depoimentos-div__meio-case-h3").innerText = cases[fase].titulo;
   document.querySelector(".depoimentos-div__meio-case-p").innerText = cases[fase].texto;
+  const video = document.querySelector(".video-case");
+  const source = video.querySelector("source");
+  source.src = cases[fase].video;
+  video.load();
 
   const btnContainer = document.querySelector(".depoimentos-div__meio-case-a");
   btnContainer.innerHTML = "";
