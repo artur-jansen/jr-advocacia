@@ -818,6 +818,7 @@ section {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7); 
     z-index: 1;
+    border-radius: 12px 0 12px 0;
 }
 
 .depoimentos-div__meio-case {
@@ -826,6 +827,8 @@ section {
     padding: 2em;
     gap: 2em;
     width: 80%;
+    min-height: 450px;
+    max-height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1416,6 +1419,11 @@ footer {
         width: 100%;
     }
 
+    .depoimentos-div__meio-case{
+        min-height: 100%;
+        max-height: 100%;
+    }
+
     /* ARTIGOS */
     /* ARTIGOS */
     /* ARTIGOS */
@@ -1586,6 +1594,10 @@ footer {
     /* ARTIGOS */
     /* ARTIGOS */
     /* ARTIGOS */
+    #artigos{
+        padding: 4em 1.5em;
+    }
+
     .artigos-container__item-baixo-btn {
         padding: 0.3em 1em;
     }

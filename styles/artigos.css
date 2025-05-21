@@ -574,7 +574,6 @@ footer {
         justify-content: center;
     }
 
-
     /* FOOTER */
     /* FOOTER */
     /* FOOTER */
@@ -609,11 +608,18 @@ footer {
     #pages-home {
         padding: 2em 1.5em 0 1.5em;
     }
+    
+    .pages-home__titulo{
+        font-size: 2em !important;
+    }
+    
+    /* ARTIGO */
+    /* ARTIGO */
+    /* ARTIGO */
+    .ultimos-artigos{
+        padding: 4em 1.5em;
+    }
 
-
-    /* ARTIGO */
-    /* ARTIGO */
-    /* ARTIGO */
     .artigos-container__item-baixo-btn {
         padding: 0.3em 1em;
     }

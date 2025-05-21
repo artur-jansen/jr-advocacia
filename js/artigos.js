@@ -33,7 +33,7 @@ function renderizarArtigos(containerId, posts, imgPrefix = './assets/') {
   container.innerHTML = '';
   posts.slice(0, 3).forEach(post => {
     container.innerHTML += `
-      <div class="artigos-container__item">
+      <div data-aos="fade-up" class="artigos-container__item">
         <img class="artigos-container__item-seta" src="${imgPrefix}seta.svg" alt="Artigo Advocacia">
         <img class="artigos-container__item-img" src="${imgPrefix}${post.image}" alt="Imagem do artigo">
         <div class="artigos-container__item-baixo">

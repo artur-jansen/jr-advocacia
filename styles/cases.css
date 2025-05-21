@@ -295,7 +295,7 @@ section {
 .timeline-container {
     position: relative;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 1em auto;
     padding: 100px 20px;
     background-color: var(--azul);
 }
@@ -519,8 +519,12 @@ footer {
     /* HOME */
     /* HOME */
     #pages-home {
-        padding: 2em 1.5em;
+        padding: 2em 0;
         margin: 4em 1em 0 1em;
+    }
+
+    .pages-home__titulo {
+        font-size: 2em;
     }
 
     /* CASE */
