@@ -1494,8 +1494,9 @@ footer {
         flex: 0 0 calc(100% - 20px);
     }
 
-    .áreas-carrossel-item-div h3 {
+    .áreas-carrossel-item h3{
         font-size: 1.5em;
+        width: 90%;
     }
 
     .áreas-btn {
@@ -1579,7 +1580,7 @@ footer {
     }
 
     .depoimentos-div__meio-case-container-a {
-        padding: 0.3em 1.5em;
+        padding: 0.3em 1em;
     }
 
     .depoimentos-carrossel-item {
@@ -1633,3 +1634,31 @@ footer {
         width: 65%;
     }
 }
+
+/* @media (max-width: 900px) {
+    .áreas-carrossel-wrapper {
+        width: 100%;
+    }
+
+    .áreas-carrossel-item {
+        flex: 0 0 calc(33.33% - 20px);
+    }
+
+    .áreas-carrossel-item h3 {
+        font-size: 1.8em;
+    }
+
+    .áreas-btn {
+        padding: 0.3em 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    #artigos{
+        padding: 4em 1.5em;
+    }
+
+    .artigos-container__item-baixo-btn {
+        padding: 0.3em 1em;
+    }
+} */

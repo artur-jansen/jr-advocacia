@@ -55,35 +55,39 @@ document.addEventListener('DOMContentLoaded', function () {
   const nextBtn = document.querySelector('.áreas-btn-next');
   const dotsContainer = document.getElementById('dots-container');
   const items = document.querySelectorAll('.áreas-carrossel-item');
+  const carrosselContainer = document.querySelector('.áreas-carrossel-container');
 
-  let itemsPorSlide = 4; // padrão
+  let itemsPorSlide = 2; // Ajustado para melhor visualização mobile inicialmente
   let totalSlides = Math.ceil(items.length / itemsPorSlide);
   let currentSlide = 0;
+  let touchStartX = 0;
+  let touchEndX = 0;
 
-  // Responsivo conforme a largura da tela
   function ajustarItensPorSlide() {
     const larguraTela = window.innerWidth;
 
     if (larguraTela <= 600) {
       itemsPorSlide = 1;
     } else if (larguraTela <= 1024) {
-      itemsPorSlide = 3;
-    } else {
       itemsPorSlide = 2;
+    } else {
+      itemsPorSlide = 2; // Mantive 2 para telas maiores, ajuste se necessário
     }
 
     totalSlides = Math.ceil(items.length / itemsPorSlide);
-    currentSlide = Math.min(currentSlide, totalSlides - 1); // Evita index inválido
+    currentSlide = Math.min(currentSlide, totalSlides - 1);
     criarDots();
     updateCarrossel();
+    atualizarVisibilidadeBotoes();
   }
 
   function updateCarrossel() {
-    const slideWidth = itemsPorSlide * (items[0].offsetWidth + 20);
-    const translateX = -(currentSlide * slideWidth);
+    const itemWidth = items[0].offsetWidth;
+    const gap = 20; // Margem entre os itens
+    const slideWidth = itemsPorSlide * (itemWidth + gap);
+    const translateX = -(currentSlide * (itemWidth + gap));
     carrossel.style.transform = `translateX(${translateX}px)`;
 
-    // Atualiza os dots
     document.querySelectorAll('.áreas-dot').forEach((dot, index) => {
       dot.classList.toggle('active', index === currentSlide);
     });
@@ -98,23 +102,66 @@ document.addEventListener('DOMContentLoaded', function () {
       dot.addEventListener('click', () => {
         currentSlide = i;
         updateCarrossel();
+        atualizarVisibilidadeBotoes();
       });
       dotsContainer.appendChild(dot);
+    }
+  }
+
+  function atualizarVisibilidadeBotoes() {
+    if (window.innerWidth <= 600) {
+      prevBtn.style.display = 'none';
+      nextBtn.style.display = 'none';
+    } else {
+      prevBtn.style.display = 'none';
+      nextBtn.style.display = 'none';
     }
   }
 
   prevBtn.addEventListener('click', () => {
     currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
     updateCarrossel();
+    atualizarVisibilidadeBotoes();
   });
 
   nextBtn.addEventListener('click', () => {
     currentSlide = (currentSlide + 1) % totalSlides;
     updateCarrossel();
+    atualizarVisibilidadeBotoes();
   });
+
+  // Touch Events para swipe
+  carrosselContainer.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+  });
+
+  carrosselContainer.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].clientX;
+    handleSwipe();
+  });
+
+  function handleSwipe() {
+    const swipeThreshold = 50;
+    const deltaX = touchEndX - touchStartX;
+
+    if (deltaX > swipeThreshold) {
+      // Swipe para a direita (anterior)
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateCarrossel();
+      atualizarVisibilidadeBotoes();
+    } else if (deltaX < -swipeThreshold) {
+      // Swipe para a esquerda (próximo)
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateCarrossel();
+      atualizarVisibilidadeBotoes();
+    }
+    touchStartX = 0;
+    touchEndX = 0;
+  }
 
   ajustarItensPorSlide();
   window.addEventListener('resize', ajustarItensPorSlide);
+  atualizarVisibilidadeBotoes(); // Garante que os botões são escondidos no carregamento em mobile
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -124,11 +171,13 @@ document.addEventListener('DOMContentLoaded', function () {
   const dotsContainer = document.getElementById('depoimentos-dots__container');
   const items = document.querySelectorAll('.depoimentos-carrossel-item');
 
-  let itemsPorSlide = 2; // Padrão
+  let itemsPorSlide = 1; // Padrão para mobile
   let totalSlides = Math.ceil(items.length / itemsPorSlide);
   let currentSlide = 0;
+  let touchStartX = 0;
+  let touchEndX = 0;
+  const carrosselContainer = document.querySelector('.depoimentos-carrossel-container');
 
-  // Responsividade
   function ajustarItensPorSlide() {
     const larguraTela = window.innerWidth;
 
@@ -142,11 +191,13 @@ document.addEventListener('DOMContentLoaded', function () {
     currentSlide = Math.min(currentSlide, totalSlides - 1);
     criarDots();
     updateCarrossel();
+    atualizarVisibilidadeBotoes();
   }
 
   function updateCarrossel() {
-    const slideWidth = itemsPorSlide * (items[0].offsetWidth + 20);
-    const translateX = -(currentSlide * slideWidth);
+    const itemWidth = items[0].offsetWidth;
+    const gap = 20; // Margem entre os itens
+    const translateX = -(currentSlide * (itemWidth + gap));
     carrossel.style.transform = `translateX(${translateX}px)`;
 
     document.querySelectorAll('.depoimentos-dot').forEach((dot, index) => {
@@ -163,23 +214,61 @@ document.addEventListener('DOMContentLoaded', function () {
       dot.addEventListener('click', () => {
         currentSlide = i;
         updateCarrossel();
+        atualizarVisibilidadeBotoes();
       });
       dotsContainer.appendChild(dot);
     }
   }
 
+  function atualizarVisibilidadeBotoes() {
+    const larguraTela = window.innerWidth;
+    const mostrarBotoes = larguraTela > 600;
+    prevBtn.style.display = mostrarBotoes ? 'block' : 'none';
+    nextBtn.style.display = mostrarBotoes ? 'block' : 'none';
+  }
+
   prevBtn.addEventListener('click', () => {
     currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
     updateCarrossel();
+    atualizarVisibilidadeBotoes();
   });
 
   nextBtn.addEventListener('click', () => {
     currentSlide = (currentSlide + 1) % totalSlides;
     updateCarrossel();
+    atualizarVisibilidadeBotoes();
   });
+
+  // Touch Events para swipe no carrossel de depoimentos
+  carrosselContainer.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+  });
+
+  carrosselContainer.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].clientX;
+    handleSwipe();
+  });
+
+  function handleSwipe() {
+    const swipeThreshold = 50;
+    const deltaX = touchEndX - touchStartX;
+
+    if (deltaX > swipeThreshold) {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateCarrossel();
+      atualizarVisibilidadeBotoes();
+    } else if (deltaX < -swipeThreshold) {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateCarrossel();
+      atualizarVisibilidadeBotoes();
+    }
+    touchStartX = 0;
+    touchEndX = 0;
+  }
 
   ajustarItensPorSlide();
   window.addEventListener('resize', ajustarItensPorSlide);
+  atualizarVisibilidadeBotoes();
 });
 
 const observer = new IntersectionObserver((entries) => {
